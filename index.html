@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>vue-components</title>
+    <style>
+        *{margin:0;padding: 0;box-sizing: border-box;}
+        :root{
+            --botton-height:32px;
+            --font-size:14px;
+            --button-border-color:#999;
+            --button-border-hover:#666;
+            --button-border-active:red;
+            --button-border-redius:4px;
+        }
+    </style>
+    <style>
+
+        body{
+            font-size: var(--font-size);
+        }
+        #app{
+            margin:20px;
+        }
+        .g-button{
+            padding:0 1em;
+            height:var(--botton-height);
+            border-color: var(--button-border-color);
+            border-radius: var(--button-border-redius);
+            font-size: var(--font-size);
+        }
+        .g-button:hover{
+            border-color: var(--button-border-hover);
+        }
+        .g-button:active{
+            border-color: var(--button-border-active);
+        }
+        .g-button:focus{
+            outline: none;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <g-button></g-button>
+</div>
+
+
+
+<script src="./node_modules/vue/dist/vue.min.js"></script>
+<script src="./g-button.js"></script>
+<script>
+    new Vue({
+        el:'#app',
+    })
+</script>
+</body>
+</html>
